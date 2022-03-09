@@ -1,0 +1,1 @@
+<span>BIENVENUE AU JEU!</span>

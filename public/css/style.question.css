@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+#container-question{
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+}
+#container-question h1{
+    color: rgb(21, 216, 216);
+}
+.question{
+    font-size: 1rem;
+    height: 90%;
+    width: 100%;
+    border: 2px solid  rgb(21, 216, 216);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;   
+}
+#container-question input, select{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(21, 216, 216);
+    border-right: 2px solid  rgb(21, 216, 216);
+}
+
+.test{
+    height: 4rem;
+    width: 60rem;
+}
+#text-reponse,#reponse{
+    width: 50rem;
+    height: 4rem;
+}
+.space{
+    padding-bottom: 20px;
+}
+
+#enregistre{
+    position: relative;
+    top: .3em;
+    left: 41em;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    background: rgb(21, 216, 216);
+    color: white;
+    font-weight: bolder;
+    height: 2.8rem;
+    width: 8rem;
+}
+#points{
+  height: 2rem;   
+}
+.question label,#reponse option{
+    font-size: 1.5rem;
+}
+.icone{
+    width: .5em;
+}

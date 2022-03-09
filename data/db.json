@@ -1,0 +1,120 @@
+{
+    "users": [
+        {
+            "nom": "Diatta",
+            "prenom": "Tapha",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": 1290
+        },
+        {
+            "nom": "SAKHO",
+            "prenom": "CAS",
+            "login": "admin@gmail.com",
+            "password": "adMin1",
+            "role": "ROLE_ADMIN",
+            "score": "0"
+        },
+        {
+            "nom": "CAS",
+            "prenom": "CAS",
+            "login": "casgraphiste1@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Mouhamed",
+            "login": "admin@gmail.com",
+            "password": "adMin1",
+            "role": "ROLE_ADMIN",
+            "score": "0"
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Mouhamed",
+            "login": "admin@gmail.com",
+            "password": "adMin1",
+            "role": "ROLE_ADMIN",
+            "score": "0"
+        },
+        {
+            "nom": "Faye",
+            "prenom": "Mouhamed",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Djibril",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Diop",
+            "prenom": "Demba",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Niass",
+            "prenom": "Cheikh",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Gueye",
+            "prenom": "Mor",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Ndafa",
+            "prenom": "Ibou",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Diagne",
+            "prenom": "Ndeye",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "Ka",
+            "prenom": "Ouley",
+            "login": "joueur@gmail.com",
+            "password": "Jou_er1",
+            "role": "ROLE_JOUEUR",
+            "score": "0"
+        }
+    ],
+
+
+
+
+    "questions": [
+        {
+            "question": "Quel pays a remporter la CAN?",
+            "NbrePoints": "",
+            "TypesReponse": "choix Multiple",
+            "Reponse":[""]
+        }
+    ]
+}
