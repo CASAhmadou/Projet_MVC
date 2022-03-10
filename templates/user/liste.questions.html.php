@@ -1,5 +1,7 @@
 
-<form action="liste_questions" method="post">    
+<form action="liste_questions" method="post">
+<input type="hidden" name="controller" value="user">
+        <input type="hidden" name="action" value="liste_questions">    
     <div id="container-quest">
         <div class="note">
             <h3>Nbre de question/jeu</h3>
@@ -49,6 +51,7 @@
                     <label for="">CIA-FBI</label>
                 </ul>
             </div>
+            <button id="next">Suivant</button>
                 
             </div>
             

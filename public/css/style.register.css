@@ -11,8 +11,9 @@
     height: 105%;
 }
 .contener-registre{
+    overflow-x: hidden;
     background: rgb(250, 248, 248);
-    height: 100%;
+    height: 65vh;
     width: 95%;
     border-radius: 1rem;
     font-weight: lighter;
@@ -24,6 +25,7 @@
     width: 60%;
 }
 .droite-registre{
+
     margin-top: 4rem;
     display: flex;
     flex: 2;

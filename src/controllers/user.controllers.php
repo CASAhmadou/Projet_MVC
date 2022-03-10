@@ -30,11 +30,6 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
         }elseif ($_REQUEST['action']=="register") {
             inscription_register();
 
-        }elseif($_REQUEST['action']=="question"){
-            create_question();
-
-        }elseif($_REQUEST['action']=="liste-questions"){
-            lister_question();
         }
     }    
 }
@@ -62,24 +57,6 @@ function jeu(){
     //Appel du model
   ob_start();
   require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."register.html.php");
-  $content_for_views=ob_get_clean();
-  //Recupération d'un fichier html dans une variable
-  require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
-}
-
- function create_question(){
-      //Appel du model
-    ob_start();
-    require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."question.html.php");
-    $content_for_views=ob_get_clean();
-    //Recupération d'un fichier html dans une variable
-    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
-}
-
-function lister_question(){
-    //Appel du model
-  ob_start();
-  require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste-questions.html.php");
   $content_for_views=ob_get_clean();
   //Recupération d'un fichier html dans une variable
   require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");

@@ -132,7 +132,7 @@ td{
     width: 98%;
     border-radius: 1%;
     box-shadow: 5px 5px 5px 5px gray;
-    overflow-x: hidden;
+    
 }
 .suivant{
     float: right;

@@ -18,7 +18,7 @@
 						<div class="tourbi">Sohna Ndiaye</div>
 					</div>
 					<div class="souf">
-						<a href="<?=PATH_VIEWS."?controller=user&action=liste-questions"?>"">
+						<a href="<?=PATH_VIEWS."?controller=question&action=liste_questions"?>"">
 							<p class="ic">Liste Questions 
 								<img class="icone" src="<?= WEB_ROOT."img".DIRECTORY_SEPARATOR."addjou.png"?>">
 							</p>
@@ -32,7 +32,7 @@
 							 	<img class="icone" src="<?= WEB_ROOT."img".DIRECTORY_SEPARATOR."addjou.png"?>">
 							</p>
 						</a>
-						<a href="<?=PATH_VIEWS."?controller=user&action=question"?>">
+						<a href="<?=PATH_VIEWS."?controller=question&action=question"?>">
 							<p class="ic">Créer Questions 
 								<img class="icone" src="<?= WEB_ROOT."img".DIRECTORY_SEPARATOR."addgrie.png"?>">
 							</p>

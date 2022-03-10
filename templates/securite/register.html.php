@@ -11,7 +11,7 @@
 
 <div id="inscrive">
 	   
-    <form action="<?= WEB_ROOT ?>" method="POST" class="action" enctype="multipart/form-data">>
+    <form action="<?= WEB_ROOT ?>" method="POST" class="action" enctype="multipart/form-data">
         <input type="hidden" name="controller" value="securite">
         <input type="hidden" name="action" value="register">
         <input type="hidden" name="role" value="<?= isset($_SESSION[KEY_USER_CONNECT])? "ROLE_ADMIN" : "ROLE_JOUEUR"?>">
@@ -63,10 +63,7 @@
                         <?php endif?>
                       <div class="error"></div>
                     </div>
-                    <div class="pied">
-                        <p>Avatar</p>
-                        <button class="btn-register">Choisir un Fichier</button>
-                    </div>
+                    
                     <div class="compte">
                         <button class="btn-register" name="compte" id="submit">Créer un Compte</button>
                     </div>

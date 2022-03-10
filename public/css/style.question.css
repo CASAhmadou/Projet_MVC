@@ -10,6 +10,7 @@
     color: rgb(21, 216, 216);
 }
 .question{
+    overflow-x: hidden;
     font-size: 1rem;
     height: 90%;
     width: 100%;

@@ -6,19 +6,14 @@ const rond = document.querySelector('#rond');
 const add = document.getElementById('add-reponse');
 const web_root = document.getElementById('web_root').value;
 const enregistre = document.getElementById('enregistre');
-const select = document.getElementById('reponse').value;
+
 
 //
-//suppression
-function delElement(element) {
-    element.remove();
-}//suppression
-
 
 function ajout_reponse(){
     //créer balise
     var check = document.createElement('input');
-    var checc = document.createElement('input');
+    var radio = document.createElement('input');
     var newreponse = document.createElement('div');
     var label = document.createElement('label');
     var reponses = document.createElement('input');
@@ -28,21 +23,22 @@ function ajout_reponse(){
 
    label.innerHTML="Reponse";
    check.setAttribute("type", "checkbox");
-   check.setAttribute("name", "checkbox")
+   check.setAttribute("name", "rep[]")
    check.setAttribute("class", "checkbox");
-   checc.setAttribute("type", "radio")
-   checc.setAttribute("name", "checkbox")
-   checc.setAttribute("class", "checkbox");
-   reponses.setAttribute("id","reponse1");
+   radio.setAttribute("type", "radio")
+   radio.setAttribute("name", "radio")
+   radio.setAttribute("class", "checkbox");
+   reponses.setAttribute("id","reponse");
    reponses.setAttribute("type","text");
-   reponses.setAttribute("name","reponse1");
+   reponses.setAttribute("name","reponse[]");
    reponses.setAttribute("id", "text-reponse");
    image.setAttribute('class','icone');
    image.setAttribute('id','supprime');
-   image.setAttribute('src',web_root+'/img/addsup.png')
+   image.setAttribute('src',web_root+'/img/addsup.png');
+   
    image.addEventListener('click',function(){
        delElement(this.parentElement);
-   })
+   });
 
  
     //liaison
@@ -52,15 +48,22 @@ function ajout_reponse(){
    question.appendChild(enregistre);
    rond.appendChild(newreponse);
    newreponse.appendChild(label);
-   newreponse.appendChild(reponses);
-   newreponse.appendChild(check);
-   newreponse.appendChild(checc);
+   newreponse.appendChild(reponses);      
    newreponse.appendChild(image);
-
-    ;
+    
+   var select = document.getElementById('reponse').value;
+   if (select==1) {
+    newreponse.appendChild(radio); 
+   }
+   else{
+    newreponse.appendChild(check);
+    }
 };
 
-
+//suppression
+function delElement() {
+    rond.innerHTML="";
+}//suppression
 
 console.log();
 add.addEventListener('click',ajout_reponse);

@@ -9,6 +9,9 @@ if(isset($_REQUEST['controller']) ){
         case "user" :
             require_once(PATH_SRC."controllers".DIRECTORY_SEPARATOR."user.controllers.php");
         break;
+        case "question" :
+            require_once(PATH_SRC."controllers".DIRECTORY_SEPARATOR."question.controllers.php");
+        break;
     }
 }else{
     require_once(PATH_SRC."controllers".DIRECTORY_SEPARATOR."securite.controllers.php");

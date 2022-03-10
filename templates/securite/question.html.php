@@ -1,6 +1,8 @@
 
 <input id="web_root" type="hidden" value="<?= WEB_ROOT ?>">
-<form action="question" method="post">    
+<form action="question" method="post">  
+<input type="hidden" name="controller" value="question">
+        <input type="hidden" name="action" value="question">  
     <div id="container-question">
         <h1>PARAMÉTRER VOTRE QUESTION</h1>
         <div class="question" id="question">
@@ -14,7 +16,7 @@
             </div>
             <div id="reponse-question" class="space">
                 <label for="">Type de réponse</label>
-                <select name="reponse" id="reponse" placeholder="choisir le type de la question" onchange="mySelect()">
+                <select name="reponse" id="reponse" placeholder="choisir le type de la question" onchange="delElement()">
                     <option value="1" id="option">Réponse unique</option>
                     <option value="2" id="option">Réponse à choix multiple</option>
                     <option value="3" id="option"> Réponse texte</option>

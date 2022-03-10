@@ -21,14 +21,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             //$pic = $_POST['picture'];
             inscription($prenom,$nom,$login,$password,$password2,$role,$score); 
                     
-        }elseif ($_REQUEST['action']=="question") {
-            $questions = $_POST['questions'];
-             $nbr_points = $_POST['number'];
-             $reponse = $_POST['reponse'];
-             $reponse1 = $_POST['reponse1'];
-             create_question($questions,$nbr_points,$reponse,$repnose1); 
-                     
-         }
+        }
     } 
 }
 // Traitement des Requetes GET
@@ -82,31 +75,7 @@ function connexion(string $login,string $password):void{
         exit();
     }    
 }
-//fonction Question
-function create_question(string $questions,int $number,string $type,string $reponse1){
- 
-    $errors=[];
-   
-    champ_obligatoire('questions',$questions,$errors,"question obligatoire");
-    champ_obligatoire('reponse1',$reponse1,$errors,"reponse obligatoire");
-    champ_obligatoire('number',$number,$errors,"reponse obligatoire");
-    champ_obligatoire('reponse',$type,$errors,"reponse obligatoire");
 
-    if(count($errors)==0){
-        valid_question('questions',$questions,$errors);
-    }
-    if (count($errors)==0) {
-        $newUser = register_user_data();
-        array_to_json($newUser,"users");
-        header("location:".WEB_ROOT."?controller=securite");
-    }else{
-      
-        $_SESSION[KEY_ERRORS]=$errors; 
-        header("location:".WEB_ROOT."?controller=securite&action=register");
-        exit();
-    }
-
-}
 
 //Inscription
 function inscription(string $prenom ,string $nom,string $login,string $password,string $password2,string $role,string $score){
