@@ -105,16 +105,33 @@
             "score": "0"
         }
     ],
-
-
-
-
     "questions": [
         {
-            "question": "Quel pays a remporter la CAN?",
-            "NbrePoints": "",
-            "TypesReponse": "choix Multiple",
-            "Reponse":[""]
+            "intitule": "CapitaL du S\u00e9n\u00e9gal?",
+            "number": "8",
+            "reponse": "1",
+            "check": null,
+            "solution": [
+                "Dakar",
+                "Yeumbeul",
+                "Diakounda"
+            ]
+        },
+        {
+            "intitule": "Repas d'aujourd'hui?",
+            "number": "25",
+            "reponse": "2",
+            "check": [
+                "on",
+                "on",
+                "on"
+            ],
+            "solution": [
+                "Hamburg",
+                "dar",
+                "sauce",
+                "schandwich"
+            ]
         }
     ]
 }

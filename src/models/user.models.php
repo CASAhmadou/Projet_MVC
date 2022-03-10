@@ -32,8 +32,12 @@ function register_user_data():array{
 }
 
 function question_data():array{
-    $quest =[
-        "questions"=>$_POST['questions']
-    ];
+    $quest = array(
+        "intitule" => $_POST['questions'],
+        "number" => $_POST['number'],
+        "reponse" => $_POST['reponse'],
+        "check" => $_POST['rep'],
+        "solution" => $_POST['solution']
+    );
     return $quest;
 }

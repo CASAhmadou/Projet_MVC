@@ -30,7 +30,7 @@ function ajout_reponse(){
    radio.setAttribute("class", "checkbox");
    reponses.setAttribute("id","reponse");
    reponses.setAttribute("type","text");
-   reponses.setAttribute("name","reponse[]");
+   reponses.setAttribute("name","solution[]");
    reponses.setAttribute("id", "text-reponse");
    image.setAttribute('class','icone');
    image.setAttribute('id','supprime');

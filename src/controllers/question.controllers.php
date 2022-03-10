@@ -3,17 +3,18 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.models.php");
 // Traitement des Requetes POST
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_REQUEST['action'])){
-        
         if ($_REQUEST['action']=="question") {
-            $questions = $_POST['questions'];
-             $nbrPoints = $_POST['number'];
-             $reponse = $_POST['reponse'];
-             $solutions = $_POST['reponse[]'];
-             $check = $_POST['rep[]'];
-            //  echo'<pre>';
-            //  var_dump($_POST);die;
-            //  echo'</pre>';
-             create_question($questions,$nbrPoints,$reponse,$solutions,$check); 
+            
+            $intitule = $_POST['questions'];
+            $nbrPoints = $_POST['number'];
+            $reponse = $_POST['reponse'];
+            $solution = $_POST['solution'];
+            $check = $_POST['rep'];
+            // var_dump(question_data());
+        //      echo'<pre>';
+        //      var_dump($solution);die;
+        //   echo'</pre>';
+             create_question($intitule,$nbrPoints,$reponse); 
                      
          }
     } 
@@ -37,23 +38,24 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
 }
 
 //fonction Question
-function create_question(string $questions,int $nbrPoints,string $reponse,string $solutions,string $check){
+function create_question(string $intitule,int $nbrPoints,string $reponse){
  
     $errors=[];
-   
-    champ_obligatoire('questions',$questions,$errors,"question obligatoire");
+    
+    champ_obligatoire('questions',$intitule,$errors,"question obligatoire");
     champ_obligatoire('number',$nbrPoints,$errors,"nombre de points obligatoire");
     champ_obligatoire('reponse',$reponse,$errors,"reponse obligatoire");
-    champ_obligatoire('reponse[]',$solutions,$errors,"reponse obligatoire");
-    champ_obligatoire('rep[]',$check,$errors,"reponse obligatoire");
+    
+    
 
     if(count($errors)==0){
-        valid_question('questions',$questions,$errors);
+        valid_question('questions',$intitule,$errors);
     }
     if (count($errors)==0) {
-        $newQuestion = register_user_data();
-        array_to_json($newQuestion,"users");
-        header("location:".WEB_ROOT."?controller=securite");
+        $newQuestion = question_data();
+        array_to_json($newQuestion,"questions");
+        header("location:".WEB_ROOT."?controller=question&action=question");
+        exit();
     }else{
       
         $_SESSION[KEY_ERRORS]=$errors; 

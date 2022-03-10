@@ -18,7 +18,7 @@ define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 define("PATH_DB",ROOT."data".DIRECTORY_SEPARATOR."db.json");
 
 //Requete GET et POST
-define("WEB_ROOT","http://localhost:8001/");
+define("WEB_ROOT","http://localhost:8002/");
 
 // URL charger les images 
 define("WEB_PUBLIC",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));

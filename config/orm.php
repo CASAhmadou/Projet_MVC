@@ -6,10 +6,10 @@ function json_to_array(string $key):array{
     return $data[$key];
 }
 //Enregistrement et Mise a jour des donnees du fichier
-function array_to_json(array $newuser, $key){
+function array_to_json(array $new, $key){
     $datJson=file_get_contents(PATH_DB);
     $data=json_decode($datJson,true); 
-    $data['users'][]=$newuser;
-    $data_file=json_encode($data,true);
+    $data[$key][]=$new;
+    $data_file=json_encode($data,JSON_PRETTY_PRINT);
     file_put_contents(PATH_DB,$data_file);   
 }
