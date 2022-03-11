@@ -107,31 +107,41 @@
     ],
     "questions": [
         {
-            "intitule": "CapitaL du S\u00e9n\u00e9gal?",
-            "number": "8",
-            "reponse": "1",
-            "check": null,
+            "intitule": "a nous?",
+            "number": "4",
+            "reponse": "Choix Multiple",
             "solution": [
+                "ok",
                 "Dakar",
-                "Yeumbeul",
-                "Diakounda"
+                "oiuyh"
+            ],
+            "radio": null,
+            "check": [
+                "1",
+                "2"
             ]
         },
         {
             "intitule": "Repas d'aujourd'hui?",
             "number": "25",
-            "reponse": "2",
-            "check": [
-                "on",
-                "on",
-                "on"
-            ],
+            "reponse": "Texte",
             "solution": [
-                "Hamburg",
-                "dar",
-                "sauce",
-                "schandwich"
-            ]
+                "khghjk"
+            ],
+            "radio": null,
+            "check": null
+        },
+        {
+            "intitule": "amer",
+            "number": "25",
+            "reponse": "Unique",
+            "solution": [
+                "Dakar",
+                "tghj",
+                "oiuyh"
+            ],
+            "radio": "1",
+            "check": null
         }
     ]
 }

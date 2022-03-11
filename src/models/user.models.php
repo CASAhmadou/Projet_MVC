@@ -8,7 +8,7 @@ function find_user_login_password(string $login,string $password):array{
     }
     return [];
 }
-
+//users
 function find_users(string $role):array{
     $users=json_to_array("users");
     $result=[];
@@ -36,8 +36,11 @@ function question_data():array{
         "intitule" => $_POST['questions'],
         "number" => $_POST['number'],
         "reponse" => $_POST['reponse'],
+        "solution" => $_POST['solution'],
+            "radio" => $_POST['radio'],
+        
         "check" => $_POST['rep'],
-        "solution" => $_POST['solution']
+        
     );
     return $quest;
 }

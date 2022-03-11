@@ -1,32 +1,5 @@
 const Questions = [
-    {
-        question: "Capital du Sénégal?",
-        un: "Dakar",
-        deux:"Kaolack",
-        trois:"Saint-Louis",
-        quatre:"Ziquinchor",
-        correct:"un",
-    },
-    {
-        question: "Quel pays a remporté la CAN?",
-        un: "Cameroun",
-        deux:"France",
-        trois:"Mali",
-        quatre:"Sénégal",
-        correct:"quatre",
-    },
-    {
-        question: "Cheikh Anta Diop est de quelle nationalité?",
-        trois:"Sénégal"
-    },
-    {
-        question: "Sonatel?",
-        un: "Orange",
-        deux:"ODC",
-        trois:"Gab",
-        quatre:"Port",
-        correct:"deux",
-    }
+    
 ];
 const cadres = document.getElementById('cadre')
 const Ket = document.querySelectorAll('.question')

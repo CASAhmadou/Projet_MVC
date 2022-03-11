@@ -6,7 +6,7 @@ const rond = document.querySelector('#rond');
 const add = document.getElementById('add-reponse');
 const web_root = document.getElementById('web_root').value;
 const enregistre = document.getElementById('enregistre');
-
+let i=1;
 
 //
 
@@ -20,13 +20,16 @@ function ajout_reponse(){
     var image = document.createElement('img');
     
     //créer attribution
-
-   label.innerHTML="Reponse";
+    
+   label.innerHTML=`Reponse ${i}`;
+   
    check.setAttribute("type", "checkbox");
-   check.setAttribute("name", "rep[]")
+   check.setAttribute("name", "rep[]");
+   check.setAttribute("value", `${i}`);
    check.setAttribute("class", "checkbox");
    radio.setAttribute("type", "radio")
    radio.setAttribute("name", "radio")
+   radio.setAttribute("value", `${i}`);
    radio.setAttribute("class", "checkbox");
    reponses.setAttribute("id","reponse");
    reponses.setAttribute("type","text");
@@ -35,9 +38,10 @@ function ajout_reponse(){
    image.setAttribute('class','icone');
    image.setAttribute('id','supprime');
    image.setAttribute('src',web_root+'/img/addsup.png');
-   
+   i++;
    image.addEventListener('click',function(){
-       delElement(this.parentElement);
+    rond.removeChild(newreponse);
+    
    });
 
  
@@ -52,10 +56,10 @@ function ajout_reponse(){
    newreponse.appendChild(image);
     
    var select = document.getElementById('reponse').value;
-   if (select==1) {
+   if (select=="Unique") {
     newreponse.appendChild(radio); 
    }
-   else{
+   if(select=="Choix Multiple"){
     newreponse.appendChild(check);
     }
 };
@@ -63,10 +67,12 @@ function ajout_reponse(){
 //suppression
 function delElement() {
     rond.innerHTML="";
+    i=1;
 }//suppression
 
 console.log();
 add.addEventListener('click',ajout_reponse);
+
 
     
     

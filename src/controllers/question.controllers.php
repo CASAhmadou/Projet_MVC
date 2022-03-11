@@ -9,12 +9,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $nbrPoints = $_POST['number'];
             $reponse = $_POST['reponse'];
             $solution = $_POST['solution'];
-            $check = $_POST['rep'];
-            // var_dump(question_data());
-        //      echo'<pre>';
-        //      var_dump($solution);die;
-        //   echo'</pre>';
-             create_question($intitule,$nbrPoints,$reponse); 
+                
+                $radio = $_POST['radio'];
+                $check = $_POST['rep'];
+            
+            
+            create_question($intitule,$nbrPoints,$reponse); 
+             
+            /*var_dump(question_data());
+             echo'<pre>';
+             var_dump($solution);die;
+             echo'</pre>';*/
+             
                      
          }
     } 
@@ -66,6 +72,7 @@ function create_question(string $intitule,int $nbrPoints,string $reponse){
 } 
 function lister_question(){
     //Appel du model
+    $data=json_to_array("questions");
   ob_start();
   require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.questions.html.php");
   $content_for_views=ob_get_clean();

@@ -17,9 +17,9 @@
             <div id="reponse-question" class="space">
                 <label for="">Type de réponse</label>
                 <select name="reponse" id="reponse" placeholder="choisir le type de la question" onchange="delElement()">
-                    <option value="1" id="option">Réponse unique</option>
-                    <option value="2" id="option">Réponse à choix multiple</option>
-                    <option value="3" id="option"> Réponse texte</option>
+                    <option value="Unique" id="option">Réponse unique</option>
+                    <option value="Choix Multiple" id="option">Réponse à choix multiple</option>
+                    <option value="Texte" id="option"> Réponse texte</option>
                 </select>
                 <img id="add-reponse" class="icone" src="<?= WEB_ROOT."img".DIRECTORY_SEPARATOR."addgrie.png"?>">
                 <div id="rond">
