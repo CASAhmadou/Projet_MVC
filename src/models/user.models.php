@@ -26,7 +26,8 @@ function register_user_data():array{
         "login"=> $_POST['login'],
         "password"=> $_POST['password'],
         "role"=> $_POST['role'],
-        "score"=> $_POST['score']
+        "score"=> $_POST['score'],
+        "file" =>$_POST['picture']
     ];
     return $extra;
 }

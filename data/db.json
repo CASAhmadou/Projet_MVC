@@ -107,13 +107,26 @@
     ],
     "questions": [
         {
-            "intitule": "a nous?",
-            "number": "4",
+            "intitule": "Comment s'appelle le pr\u00e9sident du S\u00e9n\u00e9gal?",
+            "number": "650",
+            "reponse": "Unique",
+            "solution": [
+                "Ousmane Sonko",
+                "Abdoulaye Wade",
+                "Madick\u00e9 Niang",
+                "Tapha Gueye"
+            ],
+            "radio": "1",
+            "check": null
+        },
+        {
+            "intitule": "Qui est le roi d'Oussouye? ",
+            "number": "879",
             "reponse": "Choix Multiple",
             "solution": [
-                "ok",
-                "Dakar",
-                "oiuyh"
+                "Pagne tiss\u00e9",
+                "Un sac avec des gri-gri",
+                "Marmite"
             ],
             "radio": null,
             "check": [
@@ -122,25 +135,13 @@
             ]
         },
         {
-            "intitule": "Repas d'aujourd'hui?",
-            "number": "25",
+            "intitule": "Quel m\u00e9tier de d\u00e9veloppement  aimerais-tu exercer? ",
+            "number": "459",
             "reponse": "Texte",
             "solution": [
-                "khghjk"
+                "JavaScript"
             ],
             "radio": null,
-            "check": null
-        },
-        {
-            "intitule": "amer",
-            "number": "25",
-            "reponse": "Unique",
-            "solution": [
-                "Dakar",
-                "tghj",
-                "oiuyh"
-            ],
-            "radio": "1",
             "check": null
         }
     ]

@@ -35,23 +35,3 @@
 <?php
    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
 ?>
-
-
-
-
-<!-- <div class="reponse1" id="reponse1">
-                <label for="">Réponse1</label>
-                <input type="text" name="reponse1" id="text-reponse" class="test">
-                <input type="checkbox" class="checkbox">
-                <input type="radio" class="checkbox">
-                <img class="icone" id="supprime" src="<?= WEB_ROOT."img".DIRECTORY_SEPARATOR."addsup.png"?>">
-            </div> </div>-->
-
-
-            <!-- Méthode select
-            <?php 
-                        for ($i=1; $i<=15 ; $i++) {
-                        ?>
-                    <option value="1">$i</option>                
-                    <?php }?>
-                        </input>-->

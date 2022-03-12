@@ -6,6 +6,7 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 const button = document.getElementById('submit');
 
+
 form.addEventListener('submit', e => {
     e.preventDefault();
     validateInputs();
@@ -78,3 +79,7 @@ const validateInputs = () => {
     }
 
 };
+const file = document.getElementById('file');
+function upload (img){
+    file.src=window.URL.createObjectURL(img.files[0]);
+}

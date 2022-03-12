@@ -30,3 +30,6 @@ define("KEY_ERRORS","errors");
 
 // Cle d'accès de l'utilisateur connecte
 define("KEY_USER_CONNECT","user-connect");
+
+//upload
+define("PATH_UPLOAD",ROOT."public".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR);

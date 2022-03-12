@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $password=$_POST['password'];
             connexion($login,$password);
         }
-        elseif ($_REQUEST['action']=="register") {
+        if ($_REQUEST['action']=="register") {
            $prenom = $_POST['prenom'];
             $nom = $_POST['nom'];
             $login = $_POST['login'];
@@ -18,8 +18,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $password2 = $_POST['password2'];
             $role = $_POST['role'];
             $score = $_POST['score'];
-            //$pic = $_POST['picture'];
-            inscription($prenom,$nom,$login,$password,$password2,$role,$score); 
+            $file = $_FILES['picture']['name'];
+            $tempname = $_FILES["picture"]["tmp_name"];
+            $ext_file=(explode('.',$file));
+            $ext=strtolower(end($ext_file));
+            var_dump($ext);die;
+            inscription($prenom,$nom,$login,$password,$password2,$role,$score,$file,$tempname,$ext); 
                     
         }
     } 
@@ -78,7 +82,7 @@ function connexion(string $login,string $password):void{
 
 
 //Inscription
-function inscription(string $prenom ,string $nom,string $login,string $password,string $password2,string $role,string $score){
+function inscription(string $prenom ,string $nom,string $login,string $password,string $password2,string $file,string $tempname,string $ext){
  
     $errors=[];
 
@@ -90,10 +94,23 @@ function inscription(string $prenom ,string $nom,string $login,string $password,
     if(count($errors)==0){
         valid_email('login',$login,$errors);
     }
+    //verification de l'extension
+    $tabfile=['jpg','png','jpeg'];
+    if ($file!='') {
+        foreach ($tabfile as $value) {
+            if ($ext!=$value) {
+                $errors['erImg']='image not found';
+                break;
+            }
+        } 
+    }
     if (count($errors)==0) {
 
         $newUser = register_user_data();
         array_to_json($newUser,"users");
+
+        move_uploaded_file($tempname,PATH_UPLOAD,$file);
+
         if (is_admin()) {
             header("location:".WEB_ROOT."?controller=user&action=register");
             exit();
@@ -110,6 +127,8 @@ function inscription(string $prenom ,string $nom,string $login,string $password,
         header("location:".WEB_ROOT."?controller=securite&action=register");
         exit();
     }
+   
+
 
 }
 // pour la déconnexion

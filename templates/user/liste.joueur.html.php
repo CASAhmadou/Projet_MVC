@@ -8,7 +8,6 @@
                <th>Score</th>
             </tr>
            
-            
             <?php foreach($data as $value):?>
             <tr>
                 <td><?=$value['nom']?></td>

@@ -23,13 +23,11 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
             }elseif(is_joueur()) {
                 jeu();
             }  
-
         }elseif ($_REQUEST['action']=="liste.joueur") {
             lister_joueur();
 
         }elseif ($_REQUEST['action']=="register") {
             inscription_register();
-
         }
     }    
 }
