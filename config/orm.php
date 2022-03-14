@@ -13,3 +13,8 @@ function array_to_json(array $new, $key){
     $data_file=json_encode($data,JSON_PRETTY_PRINT);
     file_put_contents(PATH_DB,$data_file);   
 }
+
+
+// function converse($login,$file,$role){
+//     
+// }

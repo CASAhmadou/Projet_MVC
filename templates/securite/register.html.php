@@ -2,17 +2,14 @@
     if (!is_admin()){
        require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");      
     }
-    if (isset($_SESSION[KEY_ERRORS])){       
-       $errors=$_SESSION[KEY_ERRORS];
-       unset($_SESSION[KEY_ERRORS]);
-    }
+    require_once(PATH_SRC."controllers".DIRECTORY_SEPARATOR."error.controller.php");
     $_SESSION[KEY_USER_CONNECT];
 ?>
 
 <div id="inscrive">
 	   
     <form action="<?= WEB_ROOT ?>" method="POST" class="action" enctype="multipart/form-data">
-    <!-- <form action="index.php" method="post$"  ></form> -->
+    
         <input type="hidden" name="controller" value="securite">
         <input type="hidden" name="action" value="register">
         <input type="hidden" name="role" value="<?= isset($_SESSION[KEY_USER_CONNECT])? "ROLE_ADMIN" : "ROLE_JOUEUR"?>">
@@ -72,7 +69,9 @@
             </div>
             <div class="droite-registre">
                 
-                <label class="titre" for="photo"><img id="file" src="" alt=""></label>
+                <label id="images" for="photo">
+                    <img class="titre"  id="file" src="" alt="">
+                </label>
                 <div class="touram">Avatar du Joueur</div>
                 
             </div>
@@ -80,7 +79,7 @@
         </form>
         </div>
     </div>
-
+    <script type="text/javascript" src="<?= WEB_PUBLIC."js".DIRECTORY_SEPARATOR."main.register.js" ?>"></script>
 <?php
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php"); 
 ?>

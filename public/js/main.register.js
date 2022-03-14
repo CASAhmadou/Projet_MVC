@@ -79,7 +79,7 @@ const validateInputs = () => {
     }
 
 };
-const file = document.getElementById('file');
 function upload (img){
+    const file = document.getElementById('file');
     file.src=window.URL.createObjectURL(img.files[0]);
 }

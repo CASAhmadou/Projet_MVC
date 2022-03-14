@@ -8,21 +8,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $intitule = $_POST['questions'];
             $nbrPoints = $_POST['number'];
             $reponse = $_POST['reponse'];
-            $solution = $_POST['solution'];
-                
-                $radio = $_POST['radio'];
-                $check = $_POST['rep'];
-            
-            
+            $solution = $_POST['solution'];            
+            $radio = $_POST['radio'];
+            $check = $_POST['rep'];
+
             create_question($intitule,$nbrPoints,$reponse); 
              
             /*var_dump(question_data());
              echo'<pre>';
              var_dump($solution);die;
-             echo'</pre>';*/
-             
-                     
-         }
+             echo'</pre>';*/                     
+        }
     } 
 }
 
@@ -50,9 +46,7 @@ function create_question(string $intitule,int $nbrPoints,string $reponse){
     
     champ_obligatoire('questions',$intitule,$errors,"question obligatoire");
     champ_obligatoire('number',$nbrPoints,$errors,"nombre de points obligatoire");
-    champ_obligatoire('reponse',$reponse,$errors,"reponse obligatoire");
-    
-    
+    champ_obligatoire('reponse',$reponse,$errors,"reponse obligatoire"); 
 
     if(count($errors)==0){
         valid_question('questions',$intitule,$errors);
@@ -62,13 +56,11 @@ function create_question(string $intitule,int $nbrPoints,string $reponse){
         array_to_json($newQuestion,"questions");
         header("location:".WEB_ROOT."?controller=question&action=question");
         exit();
-    }else{
-      
+    }else{  
         $_SESSION[KEY_ERRORS]=$errors; 
         header("location:".WEB_ROOT."?controller=question&action=question");
         exit();
     }
-
 } 
 function lister_question(){
     //Appel du model

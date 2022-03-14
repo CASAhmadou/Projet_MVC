@@ -1,6 +1,6 @@
 <?php
 
-function champ_obligatoire(string $key,string $data,array &$errors,string $message="ce champ est obligatoire"){
+function champ_obligatoire(string $key,string $data,array &$errors,string $message="Ce champ est obligatoire"){
     if(empty($data)){
         $errors[$key]=$message;
     }
@@ -13,14 +13,14 @@ function valid_email(string $key,string $data,array &$errors,string $message="em
 }
 //valid_question
 function valid_question(string $key,string $data,array &$errors,string $message="ce champ est obligatoire"){
-  if(empty($data)){
-      $errors[$key]=$message;
-  }
+  // if(empty($data)){
+  //     $errors[$key]=$message;
+  // }
 }
 
 
 //a revenir
-function valid_password(string $key,string $data,array &$errors,string $message="password invalid"){
+function valid_password(string $key,string $password,array &$errors,string $message="password invalid"){
 
 if(isset($_POST['password'])) {
   $password = $_POST['password'];
@@ -32,14 +32,14 @@ if(isset($_POST['password'])) {
   if(strlen($password) < 6 && !$number && !$uppercase && !$lowercase ) {
     $message ;
   } else {
-    $message;
+    $errors[$key]=$message;
   }
 }
-if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) {
- echo "Le mot de passe contient 6 caractères";
-} else {
- echo "Mot de passe invalide.";
-}
+// if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) {
+//  echo "Le mot de passe contient 6 caractères";
+// } else {
+//  echo "Mot de passe invalide.";
+// }
 
 
 }

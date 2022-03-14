@@ -27,7 +27,8 @@ function register_user_data():array{
         "password"=> $_POST['password'],
         "role"=> $_POST['role'],
         "score"=> $_POST['score'],
-        "file" =>$_POST['picture']
+        "file"=>$_FILES['picture']['name']
+    
     ];
     return $extra;
 }
@@ -38,10 +39,8 @@ function question_data():array{
         "number" => $_POST['number'],
         "reponse" => $_POST['reponse'],
         "solution" => $_POST['solution'],
-            "radio" => $_POST['radio'],
-        
-        "check" => $_POST['rep'],
-        
+        "radio" => $_POST['radio'],        
+        "check" => $_POST['rep'],        
     );
     return $quest;
 }

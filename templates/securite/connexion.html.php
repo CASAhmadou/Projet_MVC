@@ -1,9 +1,6 @@
 <?php
    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
-   if (isset($_SESSION[KEY_ERRORS])){       
-       $errors=$_SESSION[KEY_ERRORS];
-       unset($_SESSION[KEY_ERRORS]);
-    }
+   require_once(PATH_SRC."controllers".DIRECTORY_SEPARATOR."error.controller.php");
 ?>
 <div id="container">
        

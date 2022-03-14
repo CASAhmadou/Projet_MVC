@@ -1,108 +1,85 @@
 {
     "users": [
         {
-            "nom": "Diatta",
-            "prenom": "Tapha",
+            "nom": "SAKHO",
+            "prenom": "Mouhamed",
+            "login": "admin@gmail.com",
+            "password": "admin",
+            "role": "ROLE_ADMIN",
+            "score": "0",
+            "file": "3.png"
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Cheikhna Ahmadou",
+            "login": "momodoundiaye@gmail.com",
+            "password": "admin",
+            "role": "ROLE_ADMIN",
+            "score": "0",
+            "file": "4.png"
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Mouhamed",
+            "login": "momo@gmail.com",
+            "password": "admin",
+            "role": "ROLE_ADMIN",
+            "score": "0",
+            "file": "4.png"
+        },
+        {
+            "nom": "guerte",
+            "prenom": "sombi",
             "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": 1290
+            "password": "jouit",
+            "role": "ROLE_ADMIN",
+            "score": "0",
+            "file": "carte m\u00e8re.jpg"
         },
         {
             "nom": "SAKHO",
-            "prenom": "CAS",
-            "login": "admin@gmail.com",
-            "password": "adMin1",
+            "prenom": "Cheikhna Ahmadou",
+            "login": "amalasakho92@gmail.com",
+            "password": "admin",
             "role": "ROLE_ADMIN",
-            "score": "0"
+            "score": "0",
+            "file": "4.png"
         },
         {
-            "nom": "CAS",
-            "prenom": "CAS",
-            "login": "casgraphiste1@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Ndiaye",
-            "prenom": "Mouhamed",
-            "login": "admin@gmail.com",
-            "password": "adMin1",
+            "nom": "SAKHO",
+            "prenom": "Cheikhna Ahmadou",
+            "login": "amalasakho92@gmail.com",
+            "password": "passer",
             "role": "ROLE_ADMIN",
-            "score": "0"
+            "score": "0",
+            "file": "amalasakho92.ROLE_ADMIN."
         },
         {
-            "nom": "Ndiaye",
-            "prenom": "Mouhamed",
-            "login": "admin@gmail.com",
-            "password": "adMin1",
+            "nom": "SAKHO",
+            "prenom": "Cheikhna Ahmadou",
+            "login": "amalasakho92@gmail.com",
+            "password": "azer",
             "role": "ROLE_ADMIN",
-            "score": "0"
+            "score": "0",
+            "file": "amalasakho92.ROLE_ADMIN."
         },
         {
-            "nom": "Faye",
-            "prenom": "Mouhamed",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
+            "nom": "ikk",
+            "prenom": "Cheikhna Ahmadou",
+            "login": "joeur@gmail.com",
+            "password": "passer",
+            "role": "ROLE_ADMIN",
+            "score": "0",
+            "file": "joeur.ROLE_ADMIN.png"
         },
         {
-            "nom": "Ndiaye",
-            "prenom": "Djibril",
+            "nom": "ikk",
+            "prenom": "omaz",
             "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Diop",
-            "prenom": "Demba",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Niass",
-            "prenom": "Cheikh",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Gueye",
-            "prenom": "Mor",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Ndafa",
-            "prenom": "Ibou",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Diagne",
-            "prenom": "Ndeye",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
-        },
-        {
-            "nom": "Ka",
-            "prenom": "Ouley",
-            "login": "joueur@gmail.com",
-            "password": "Jou_er1",
-            "role": "ROLE_JOUEUR",
-            "score": "0"
+            "password": "azert",
+            "role": "ROLE_ADMIN",
+            "score": "0",
+            "file": "joueur.ROLE_ADMIN.png"
         }
     ],
     "questions": [
@@ -140,6 +117,27 @@
             "reponse": "Texte",
             "solution": [
                 "JavaScript"
+            ],
+            "radio": null,
+            "check": null
+        },
+        {
+            "intitule": "Comment tu vas?",
+            "number": "750",
+            "reponse": "Unique",
+            "solution": [
+                "Je vais bien",
+                "Alhamdoul'illah"
+            ],
+            "radio": "2",
+            "check": null
+        },
+        {
+            "intitule": "azertyuikuyt",
+            "number": "12",
+            "reponse": "Texte",
+            "solution": [
+                "qsdfghgf"
             ],
             "radio": null,
             "check": null

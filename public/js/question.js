@@ -41,6 +41,10 @@ function ajout_reponse() {
     i++;
     image.addEventListener('click', function () {
         rond.removeChild(newreponse);
+        // for (let i = 0; i < rond.length; i++) {
+        //     //const element = rond[i];
+        //     label.innerHTML = `Reponse ${i}`;
+        // }
 
     });
 

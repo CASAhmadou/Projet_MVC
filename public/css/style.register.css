@@ -14,7 +14,7 @@
     overflow-x: hidden;
     background: rgb(250, 248, 248);
     height: 65vh;
-    width: 95%;
+    width: 90%;
     border-radius: 1rem;
     font-weight: lighter;
     display: flex;
@@ -49,8 +49,13 @@
     height: 15em;
     width: 15em;
     border: .2rem solid rgb(0, 174, 255);
-   
+    border: none;
+    
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
 }
+
 .touram{
     text-align: center;
     font-size: 1.5rem;
@@ -70,16 +75,6 @@
     display: flex;
     justify-content: center;
     height: 7%;
-}
-#file{
-    width: 30%;
-    height: 2.5rem;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1em;
-    color: white;
-    
 }
 .btn-register{
     width: 30%;
@@ -102,4 +97,7 @@
 .input-control {
     display: flex;
     flex-direction: column;
+}
+#supprime{
+   width: 1.5vw;
 }

@@ -2,12 +2,12 @@
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.models.php");
 
 //Traitement des Requetes
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+/*if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_REQUEST['action'])){
         if($_REQUEST['action']=="connexion")
         echo"Traiter le formulaire de connexion";
     }
-}
+}*/
 
 //Traitement des Requetes GET
 if($_SERVER["REQUEST_METHOD"]=="GET"){
